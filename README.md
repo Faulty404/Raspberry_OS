@@ -12,11 +12,15 @@ $ git clone https://github.com/Faulty404/Rpi_Low_Level.git
 ```
 Go into the repository folder and switch to the dev branch
 
-``` $ git checkout dev ```
+``` 
+$ git checkout dev 
+```
 
 Build the kernel image using the make command
 
-``` $ make ```
+``` 
+$ make
+ ```
 
 
 
