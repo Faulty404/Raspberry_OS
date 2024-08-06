@@ -23,30 +23,30 @@ void gpio_pin_enable(u8 pinNumber)
     REGS_GPIO->pupd_enable_clocks[pinNumber / 32] = 0;
 }
 
-// void gpio_pin_set(u8 pinNumber)
-// {
-//     if (pinNumber <= 31)
-//     {
+void gpio_pin_set(u8 pinNumber)
+{
+    if (pinNumber <= 31)
+    {
 
-//         REGS_GPIO->output_set.data[0] = (1 << pinNumber);
-//     }
+        REGS_GPIO->output_set.data[0] = (1 << pinNumber);
+    }
 
-//     else if (pinNumber >= 32 && pinNumber <= 57)
-//     {
-//         REGS_GPIO->output_set.data[1] = (1 << (pinNumber - 31));
-//     }
-// }
+    else if (pinNumber >= 32 && pinNumber <= 57)
+    {
+        REGS_GPIO->output_set.data[1] = (1 << (pinNumber - 31));
+    }
+}
 
-// void gpio_pin_clear(u8 pinNumber)
-// {
-//     if (pinNumber <= 31)
-//     {
+void gpio_pin_clear(u8 pinNumber)
+{
+    if (pinNumber <= 31)
+    {
 
-//         REGS_GPIO->output_clear.data[0] = (1 << pinNumber);
-//     }
+        REGS_GPIO->output_clear.data[0] = (1 << pinNumber);
+    }
 
-//     else if (pinNumber >= 32 && pinNumber <= 57)
-//     {
-//         REGS_GPIO->output_clear.data[1] = (1 << (pinNumber - 31));
-//     }
-// }
+    else if (pinNumber >= 32 && pinNumber <= 57)
+    {
+        REGS_GPIO->output_clear.data[1] = (1 << (pinNumber - 31));
+    }
+}
